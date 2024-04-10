@@ -1,14 +1,15 @@
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 2px;
+    padding: 2px;
+    
   }
   
 
   body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f0f0;
+    background-color: rgb(158, 165, 132);
+    
   }
   
   .container {
@@ -24,7 +25,8 @@
   h1 {
     margin-bottom: 20px;
     text-align: center;
-    color: #333;
+    color:black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   .search-container {
@@ -40,10 +42,10 @@
     border: 2px;
     border-block-color: blue;
     border-color: #333;
-    margin-right: 8px;
-    width: 200px;
-    height:40px;
-    font-size: medium;
+    margin-right: 10px;
+    width: 250px;
+    height:20px;
+    font-size: large;
   }
   
   button {
