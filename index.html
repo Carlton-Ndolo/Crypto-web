@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cryptocurrency Web</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class = "container">
+        <h1>Cryptocurrency Web</h1>
+        <div class = "search-container">
+            <input type="text" id="searchInput" placeholder = "Search by name or symbol">
+            <button id = "searchBtn">Search</button>
+        </div>
+        <div id = "coinSymbols"></div>
+        <div id = "cryptoDetails"></div>
+        <div class = "watchlist-container">
+            <h2>Watchlist</h2>
+            <ul id = "watchListItems"></ul>
+            <div id = "coinComparison"></div>
+            <select name="coinType1" id="coinSelect1"></select>
+            <select name="coinType2" id="coinSelect2"></select>
+            <button id = "compareBtn">Compare Prices</button>
+            <div id = "comparisonResult"></div>
+        </div>
+
+    </div>
+    <script src = "./index.js"></script>
     
 </body>
 </html>
