@@ -58,6 +58,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  /*searchInput.addEventListener('input', () => {
+    const searchQuery = searchInput.value.trim();
+    const searchResult = cryptocurrencyData.find(crypto =>
+        crypto.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        crypto.symbol.toLowerCase() === searchQuery.toLowerCase()
+    );
+
+    displayCryptocurrencyDetails(searchResult);
+})*/
+
+
 function displayCoinsSymbols() {
     const coinsSymbolsContainer = document.getElementById('coinSymbols');
     coinsSymbolsContainer.innerHTML = ''; 
@@ -96,9 +107,36 @@ fetchData().then(() => {
 fetchData().then( () => {
 
     displayCoinsInDropdown();  
-    
+
 });
- 
+compareButton.addEventListener('click', () => {
+    const symbol1 = coinSelect1.value;
+    const symbol2 = coinSelect2.value;
+    const coin1 = cryptocurrencyData.find(item => item.symbol === symbol1);
+    const coin2 = cryptocurrencyData.find(item => item.symbol === symbol2);
+
+    if (coin1 && coin2) {
+        compareCoinPrices(coin1, coin2);
+    } else {
+        comparisonResult.textContent = 'Please select valid coins.';
+    }
+});
+
+function compareCoinPrices(coin1, coin2) {
+    const coin1Price = parseFloat(coin1.price_usd);
+    const coin2Price = parseFloat(coin2.price_usd);
+
+    comparisonResult.innerHTML = '';
+  
+    const comparisonDetails = document.createElement('div');
+    comparisonDetails.innerHTML = `
+        <h4>Price Comparison</h4>
+        <p>${coin1.name} (${coin1.symbol}) Price: $${coin1Price.toFixed(2)}</p>
+        <p>${coin2.name} (${coin2.symbol}) Price: $${coin2Price.toFixed(2)}</p>
+        <p>Difference: $${Math.abs(coin1Price - coin2Price).toFixed(2)}</p>
+    `;
+    comparisonResult.appendChild(comparisonDetails);
+}
   
 
     
