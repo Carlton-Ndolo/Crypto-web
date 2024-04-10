@@ -77,10 +77,28 @@ function displayCoinsSymbols() {
   }
   
 fetchData().then(() => {
+
     displayCoinsSymbols(); 
   });
-  
-  
+
+  function displayCoinsInDropdown() {
+    cryptocurrencyData.forEach(crypto => {
+        const option1 = document.createElement('option');
+        const option2 = document.createElement('option');
+        option1.value = crypto.symbol;
+        option1.textContent = `${crypto.name} (${crypto.symbol})`;
+        option2.value = crypto.symbol;
+        option2.textContent = `${crypto.name} (${crypto.symbol})`;
+        coinSelect1.appendChild(option1);
+        coinSelect2.appendChild(option2);
+    });
+}
+fetchData().then( () => {
+
+    displayCoinsInDropdown();  
+    
+});
+ 
   
 
     
