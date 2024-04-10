@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /*searchInput.addEventListener('input', () => {
+  searchInput.addEventListener('input', () => {
     const searchQuery = searchInput.value.trim();
     const searchResult = cryptocurrencyData.find(crypto =>
         crypto.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     displayCryptocurrencyDetails(searchResult);
-})*/
+})
 
 
 function displayCoinsSymbols() {
