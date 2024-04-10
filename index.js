@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const coinSelect2 = document.getElementById("coinSelect2");
     const compareButton = document.getElementById("compareBtn");
     const compareResults = document.getElementById("comparisonResult");
+
+    let cryptoCurrencyData = [];
     
 
 })
