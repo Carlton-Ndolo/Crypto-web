@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const baseUrl = 'https://api.coinlore.net/api/tickers/';
-    //const baseUrl = 'http://localhost:3000/data';
+    //const baseUrl = 'https://api.coinlore.net/api/tickers/';//
+    const baseUrl = 'http://localhost:3000/data';
     const cryptoDetailsContainer = document.getElementById('cryptoDetails');
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchBtn');
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error('Network response was not ok');
             }
             const data = await response.json();
-            cryptocurrencyData = data.data || [];
+            cryptocurrencyData = data;
             
         } catch (error) {
             console.error('Error fetching data:', error);
