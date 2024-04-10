@@ -1,0 +1,131 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    max-width: 960px;
+    max-height: fit-content;
+    margin: 20px auto;
+    padding: 20px;
+    background-color:cornflowerblue;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .search-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px;
+    border-block-color: blue;
+    border-color: #333;
+    margin-right: 8px;
+    width: 200px;
+    height:40px;
+    font-size: medium;
+  }
+  
+  button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    height: 40px;
+    border:#ccc;
+    background-color: rgb(34, 117, 85);
+    color: #fff;
+    cursor: pointer;
+    font-size: medium;
+  }
+  
+  button:hover {
+    background-color:blueviolet;
+  }
+  
+  #coinSymbols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .symbol-item {
+    padding: 12px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .symbol-item:hover {
+    background-color:coral;
+  }
+  
+  
+  #cryptoDetails {
+    margin-bottom: 30px;
+  }
+  
+  .crypto-details {
+    border-style: double;
+    border-radius: 4px;
+    padding: 10px;
+    border-color: darkgray;
+    background-color:rgb(231, 230, 206);
+  }
+  
+  .watchlist-container {
+    border-radius: 1%;
+    border-color: gray;
+    border-style: double;
+    padding-top: 20px;
+    background-color: rgb(231, 230, 206);
+    padding-left: 10px;
+    font-size: medium;
+  }
+  
+  #comparisonResult {
+    margin-top: 20px;
+    border-top: 1px solid #777373;
+    border-color: #333;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+  }
+  #coinSelect1, #coinSelect2{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color:lightblue;
+    padding-left: 10px;
+    font-size: medium;
+  }
+  #coinSelect2:hover{
+    background-color: rgb(231, 253, 251);
+  }
+  #coinSelect1:hover{
+    background-color: rgb(231, 253, 251);
+  }
