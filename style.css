@@ -76,6 +76,8 @@
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
+    font-stretch: normal;
+    font-style: oblique;
   }
   
   .symbol-item:hover {
@@ -96,7 +98,7 @@
   }
   
   .watchlist-container {
-    border-radius: 1%;
+    border-radius: 2%;
     border-color: gray;
     border-style: double;
     padding-top: 20px;
